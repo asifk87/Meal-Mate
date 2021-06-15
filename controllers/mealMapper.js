@@ -57,7 +57,19 @@ router.get('/recipes', (req,res) => {
         })
         .catch(console.error)
 })
-// show route ()
+// C for Create route
+router.get('/groceries/new', (req,res) => {
+    // console.log('home route hit');
+    // res.send('newGrocery Route')
+    res.render('./create/newGrocery')
+    // Grocery.find({})
+    //     .then(groceries => {
+    //         console.log(groceries);
+    //         // res.send(groceries)
+    //     res.render('groceries', {groceries})
+    //     })
+    //     .catch(console.error)
+})
 
 
 // export 
