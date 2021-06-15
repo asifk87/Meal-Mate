@@ -1,7 +1,15 @@
-<h1>Index Page Hit</h1>
-<ul>
-    Grocery List:
-    <% groceries.forEach( grocery => { %>
-    <li> <%= grocery.item %> </li>
-    <% }) %>
-</ul>
+<div class="main">
+    <h1>Meal Mates</h1>
+    <ul>
+        <!-- Main Meals List: -->
+        <% recipes.forEach( recipes => { %>
+        <li> 
+           <div> <%= recipes.id %> </div>
+           <div> <img src=" <%= recipes.img %> " alt="Img"> </div>
+           <div> <%= recipes.title %> </div>
+           <div> <%= recipes.ingrediants %> </div>
+
+        </li>
+        <% }) %>
+    </ul>
+</div>

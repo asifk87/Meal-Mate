@@ -1,10 +1,13 @@
 // imports
 const express = require ('express')
 const mealsController = require('./controllers/mealMapper')
-
+const ejsLayouts = require('express-ejs-layouts')
 // initialize express + configure
 const app = express ()
 app.set('view engine','ejs')
+// setting up public folder
+app.use(ejsLayouts)
+app.use(express.static(__dirname + '/public'))
 
 //middlewear 
 app.use(express.json())

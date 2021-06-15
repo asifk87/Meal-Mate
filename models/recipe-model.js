@@ -5,6 +5,7 @@ const RecipeSchema = new mongoose.Schema(
         title: String,
         serving: Number,
         ingrediants: [String],
+        img: String,
         complete: {type: Boolean, default: false}
     }
 )
