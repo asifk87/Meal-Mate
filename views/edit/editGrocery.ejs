@@ -1,0 +1,13 @@
+<div class="main">
+    <h1>New grocery Item Route hit</h1>
+    <p> <%= grocery %> </p> 
+    <form action="/groceries/<%-grocery.id %>/?_method=put" method="POST">
+    <div class="form-group">
+        <label for="item">Item:</label>
+        <input type="text" id="item" name="item" class="form-control" value="<%-grocery.item %>">
+    </div>
+    <input type="submit">
+    <a href="/groceries"> Cancel </a>
+    </form>
+
+</div>

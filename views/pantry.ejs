@@ -1,9 +1,25 @@
 <div class="main">
     <h1>Pantry List</h1>
+
+    <form action="/pantry" method="POST">
+        <div class="form-group">
+            <label for="item">Add Item:</label>
+            <input type="text" name="item" class="form-control">
+            <input type="submit">
+        </div>
+        </form>
     <ul>
-        <!-- Grocery List: -->
+        <!-- Pantry List: -->
         <% pantries.forEach( pantry => { %>
-        <li> <%= pantry.item %> </li>
+        <li> <div> <%= pantry.item %> </div>
+            <div class="links">
+                <a href="/pantry/<%- pantry.id %>">Views</a>
+                <a href="/pantry/<%- pantry.id %>/edit">Edit</a>
+                <form action="/pantry/<%-pantry.id%>/?_method=DELETE" method="POST">
+                <input type="submit" value="Delete" class="button"/>
+                </form>
+            </div>     
+        </li>
         <% }) %>
     </ul>
 

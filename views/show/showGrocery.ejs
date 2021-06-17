@@ -1,0 +1,9 @@
+<div class="main">
+    <h1>Grocery Item:</h1>
+    <h1> <%= grocery.item %> </h1>
+    <a href="/groceries">Back</a>
+    <a href="/groceries/<%- grocery.id %>/edit">Edit</a>
+    <form action="/groceries/<%-grocery.id%>?_method=DELETE" method="post">
+    <input type="submit" value="Delete" class="button" />
+    </form>
+</div>

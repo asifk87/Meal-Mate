@@ -1,0 +1,13 @@
+<div class="main">
+    <h1>New pantry Item Route hit</h1>
+    <p> <%= pantry %> </p> 
+    <form action="/pantry/<%-pantry.id %>/?_method=put" method="POST">
+    <div class="form-group">
+        <label for="item">Item:</label>
+        <input type="text" id="item" name="item" class="form-control" value="<%-pantry.item %>">
+    </div>
+    <input type="submit">
+    <a href="/pantry"> Cancel </a>
+    </form>
+
+</div>
