@@ -3,14 +3,17 @@
     <form action="/recipes" method="post">
         <div>
             <label for="title">Recipe Title:</label>
-            <input type="text" name="title" id="title">
+            <input type="text" name="title" id="title" placeholder="Chicken Soup">
             <label for="serving">Serving:</label>
-            <input type="number" name="serving" id="serving">
-            <label for="ingrediants">Ingrediants:</label>
-            <input type="text" name="ingrediants" id="ingrediants">
+            <input type="number" name="serving" id="serving" placeholder="2">
+            <label for="ingredients">Ingredients:</label>
+            <input type="text" name="ingredients" id="ingredients" placeholder="Chicken, Onion, green pepper,...">
+            <label for="instruction">Cooking Instruction:</label>
+            <input type="text" name="instruction" id="instruction" placeholder ="Turn oven on to 400">
             <label for="img">Image URL:</label>
-            <input type="text" name="img" id="img" value="test.img">
+            <input type="text" name="img" id="img" placeholder="image/url.img">
         </div>
         <input type="submit" value="Submit">
+        <a href="/recipes">Cancel</a>
     </form>
 </div>

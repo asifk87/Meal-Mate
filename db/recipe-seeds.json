@@ -2,35 +2,40 @@
     {
        "title":"Chicken Soup",
        "serving": 1,
-       "ingrediants": ["Chicken","Onion","Carrot","Chicken Stock"],
+       "ingredients": ["Chicken","Onion","Carrot","Chicken Stock"],
+       "instruction": "this is instructions for this recipe",
        "img":"https://bigoven-res.cloudinary.com/image/upload/d_recipe-no-image.jpg,t_recipe-480/comforting-chicken-noodle-soup-8c8fe2.jpg",
        "complete":false
     },
     {
        "title":"Veg Soup",
        "serving": 1,
-       "ingrediants": ["Red Bell Peper","Onion","Carrot","Vegitable Stock"],
+       "ingredients": ["Red Bell Peper","Onion","Carrot","Vegitable Stock"],
+       "instruction": "this is instructions for this recipe",
        "img":"https://bigoven-res.cloudinary.com/image/upload/d_recipe-no-image.jpg,t_recipe-480/summer-vegetable-soup-4.jpg",
        "complete":false
     },
     {
        "title":"Chicken and Rice",
        "serving": 2,
-       "ingrediants": ["Chicken","Red Bell Peper","Onion","Carrot","Rice"],
+       "ingredients": ["Chicken","Red Bell Peper","Onion","Carrot","Rice"],
+       "instruction": "this is instructions for this recipe",
        "img":"https://photos.bigoven.com/recipe/hero/paprika-chicken-rice-140b9e2ee050aaa2f0215383.jpg?h=300&w=300",
        "complete":false
     },
     {
        "title":"Butter Chicken",
        "serving": 2,
-       "ingrediants": ["Chicken","Red Bell Peper","Onion","Carrot","Rice"],
+       "ingredients": ["Chicken","Red Bell Peper","Onion","Carrot","Rice"],
+       "instruction": "this is instructions for this recipe",
        "img":"https://bigoven-res.cloudinary.com/image/upload/d_recipe-no-image.jpg/butter-chicken-murgh-makhani-recipe-150ff6d77854b1d2ba6829b8.jpg",
        "complete":false
     },
     {
        "title":"Beef Mac and Cheese ",
        "serving": 2,
-       "ingrediants": ["Chicken","Red Bell Peper","Onion","Carrot","Rice"],
+       "ingredients": ["Chicken","Red Bell Peper","Onion","Carrot","Rice"],
+       "instruction": "this is instructions for this recipe",
        "img":"https://bigoven-res.cloudinary.com/image/upload/t_recipe-256/beef-macaroni-skillet-recipe-2.jpg",
        "complete":false
     }

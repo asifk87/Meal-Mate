@@ -13,7 +13,7 @@
         <% pantries.forEach( pantry => { %>
         <li> <div> <%= pantry.item %> </div>
             <div class="links">
-                <a href="/pantry/<%- pantry.id %>">Views</a>
+                <a href="/pantry/<%- pantry.id %>">View</a>
                 <a href="/pantry/<%- pantry.id %>/edit">Edit</a>
                 <form action="/pantry/<%-pantry.id%>/?_method=DELETE" method="POST">
                 <input type="submit" value="Delete" class="button"/>

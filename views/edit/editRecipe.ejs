@@ -1,0 +1,21 @@
+<div class="main">
+    <h1>New recipe Item Route hit</h1>
+    <!-- <p> <%= recipe %> </p>  -->
+    <form action="/recipe/<%-recipe.id %>/?_method=put" method="POST">
+    <div class="form-group">
+        <label for="title">Recipe Title:</label>
+        <input type="text" name="title" id="title" value="<%-recipe.title%>">
+        <label for="serving">Serving:</label>
+        <input type="number" name="serving" id="serving" value="<%-recipe.serving%>">
+        <label for="ingredients">Ingredients:</label>
+        <input type="text" name="ingredients" id="ingredients" value="<%-recipe.ingredients%>">
+        <label for="instruction">Cooking Instruction:</label>
+        <input type="text" name="instruction" id="instruction" value ="<%-recipe.instruction%>">
+        <label for="img">Image URL:</label>
+        <input type="text" name="img" id="img" value="<%-recipe.img%>">
+    </div>
+    <input type="submit">
+    <a href="/recipes"> Cancel </a>
+    </form>
+
+</div>

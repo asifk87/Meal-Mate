@@ -1,9 +1,18 @@
 <div class="main">
     <h1>Recipe List</h1>
+    <a href="/recipe/new">New</a>
     <ul>
-        <!-- Grocery List: -->
+        <!-- Recipe List: -->
         <% recipes.forEach( recipe => { %>
-        <li> <%= recipe.title %> </li>
+        <li> <div> <%= recipe.title %> </div> 
+            <div class="links">
+                <a href="/recipe/<%- recipe.id %>">View</a>
+                <a href="/recipe/<%- recipe.id %>/edit">Edit</a>
+                <form action="/recipe/<%-recipe.id%>/?_method=DELETE" method="POST">
+                <input type="submit" value="Delete" class="button"/>
+                </form>
+            </div>
+        </li>
         <% }) %>
     </ul>
 

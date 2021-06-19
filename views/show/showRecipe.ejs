@@ -1,9 +1,14 @@
 <div class="main">
-    <h1>Recipe:</h1>
-    <h1> <%= recipe.title %> </h1>
-    <a href="/recipes">Back</a>
-    <a href="/recipes/<%- recipe.id %>/edit">Edit</a>
-    <form action="/recipes/<%-recipe.id%>?_method=DELETE" method="post">
-    <input type="submit" value="Delete" class="button" />
-    </form>
+    <h1>Recipe:<br><%=recipe.title%></h1>
+    <h2>Serving Size:<br><%=recipe.serving%></h2>
+    <p>Ingredients:<br><%=recipe.ingredients%></p>
+    <p>Cooking Instruction:<br><%=recipe.instruction%></p>
+    <img src="<%=recipe.img%>" alt="<%=recipe.title%>">
+    <div class="nav links">
+        <a href="/recipes">Back</a>
+        <a href="/recipe/<%- recipe.id %>/edit">Edit</a>
+        <form action="/recipe/<%-recipe.id%>?_method=DELETE" method="post">
+        <input type="submit" value="Delete" class="button" />
+        </form>
+    </div>
 </div>
