@@ -21,6 +21,9 @@ router.get('/', (req,res) => {
         .catch(console.error)
 })
 
+
+
+
 // //Grocery Route
 // router.get('/groceries', (req,res) => {
 //     console.log('home route hit');
