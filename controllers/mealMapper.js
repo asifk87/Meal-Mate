@@ -20,6 +20,20 @@ router.get('/', (req,res) => {
         })
         .catch(console.error)
 })
+// search query 
+router.post('/', (req,res) => {
+    // console.log(req.body);
+    // console.log(req.body.ingredients);
+    // let Search = req.body.ingredients
+    // return console.log(Search.toLowerCase())
+    Recipe.find(req.body)
+        .then(recipes => {
+            console.log(recipes)
+            res.render('index', {recipes})
+        })
+        .then(console.log)
+        .catch(console.error)
+})
 
 
 
