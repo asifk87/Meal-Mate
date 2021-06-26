@@ -6,6 +6,7 @@ const groceryController = require('./controllers/groceryController')
 const pantryController = require('./controllers/pantryController')
 const recipeController = require('./controllers/recipeController')
 
+
 const ejsLayouts = require('express-ejs-layouts')
 const Grocery = require('./models/grocery-model')
 // initialize express + configure
