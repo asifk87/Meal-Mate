@@ -1,20 +1,24 @@
-<div class="main">
-    <h1>Meal Mates</h1>
-    <form action="/" method="POST">
-        <div class="form-group">
-            <label for="ingredients">Search Item:</label>
-            <input type="text" name="ingredients" class="form-control">
-            <input type="submit">
-        </div>
-    </form>
-    <ul>
+<div class="sm:w-full">
+    <!-- search recipe -->
+    <div class="bg-white py-8 px-6 shadow rounded-lg sm:px-10">
+        <form action="/" class="mb-0 space-y-6" method="POST">
+            <div class="">
+                <label for="ingredients" class="block text-lg font-medium text-gray-700">Search Indgredient:</label>
+                <div class="mt-2">
+                    <input type="text" name="ingredients" class="w-full rounded-lg">
+                </div>
+            </div>
+            <input class="btn" type="submit">
+        </form>
+    </div>
+    <ul class="sm:grid sm:grid-cols-2 md:grid md:grid-cols-3 lg:grid lg:grid-cols-4 ">
         <!-- Main Meals List: -->
         <% recipes.forEach( recipes => { %>
-        <li> 
-           <div> <%= recipes.id %> </div>
-           <div> <img src=" <%= recipes.img %> " alt="Img"> </div>
-           <div> <%= recipes.title %> </div>
-           <div> <%= recipes.ingredients %> </div>
+        <li class="max-w-sm p-6 bg-gray-400 m-3 rounded-lg shadow-xl"> 
+            <div class="mb-2" > <%= recipes.title %> </div>
+           <!-- <div> <%= recipes.id %> </div> -->
+           <div> <img class="rounded-lg shadow-xl min-w-full" src=" <%= recipes.img %> " alt="Img"> </div>
+           <div class="mt-3 " > Recipe Ingredients: <br>  <%= recipes.ingredients %> </div>
 
         </li>
         <% }) %>

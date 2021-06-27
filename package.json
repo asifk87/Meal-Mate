@@ -19,10 +19,16 @@
   },
   "homepage": "https://github.com/asifk87/Meal-Mates#readme",
   "dependencies": {
+    "@tailwindcss/forms": "^0.3.3",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
     "method-override": "^3.0.0",
     "mongoose": "^5.12.13"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4"
   }
 }
