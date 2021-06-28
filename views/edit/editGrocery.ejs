@@ -1,13 +1,17 @@
-<div class="main">
-    <h1>New grocery Item Route hit</h1>
-    <p> <%= grocery %> </p> 
-    <form action="/groceries/<%-grocery.id %>/?_method=put" method="POST">
-    <div class="form-group">
-        <label for="item">Item:</label>
-        <input type="text" id="item" name="item" class="form-control" value="<%-grocery.item %>">
+<div class="sm:w-full">
+    <!-- <p> <%= grocery %> </p>  -->
+    <div class="m-2" >
+        <h1 class="m-2 text-xl" >Update Item:</h1>
+        <form action="/groceries/<%-grocery.id %>/?_method=put" method="POST" class="">
+            <div class="flex">
+                <!-- <label for="item"></label> -->
+                <input type="text" id="item" name="item" class="ml-2 rounded-lg" value="<%-grocery.item %>">
+            </div>
+            <div class="flex my-2" >
+                <input class="btn mx-2" type="submit">
+                <a class="btn mx-2" href="/groceries"> Cancel </a>
+            </div>
+        </form>
     </div>
-    <input type="submit">
-    <a href="/groceries"> Cancel </a>
-    </form>
 
 </div>

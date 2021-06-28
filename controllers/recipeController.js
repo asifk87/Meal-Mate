@@ -84,7 +84,7 @@ router.put('/recipe/:id',(req,res) => {
         {new:true}
     )
         .then( () => {
-            res.redirect('/recipes')
+            res.redirect(`/recipe/${id}`)
         })
     })
 // Delete route

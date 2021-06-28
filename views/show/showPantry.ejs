@@ -1,9 +1,13 @@
-<div class="main">
-    <h1>Pantry Item:</h1>
-    <h1> <%= pantry.item %> </h1>
-    <a href="/pantry">Back</a>
-    <a href="/pantry/<%- pantry.id %>/edit">Edit</a>
-    <form action="/pantry/<%-pantry.id%>?_method=DELETE" method="post">
-    <input type="submit" value="Delete" class="button" />
-    </form>
+<div class="ml-4">
+    <h1 class="mb-2 text-xl" >Pantry Item:</h1>
+   <div><h1 class="text-2xl"><%= pantry.item %></h1></div>
+             <div class= "flex">
+                 <a class="btn my-2 mr-2" href="/pantry">Back</a>
+ 
+                 <a class="btn my-2 mr-2" href="/pantry/<%- pantry.id %>/edit">Edit</a>
+ 
+                 <form action="/pantry/<%-pantry.id%>/?_method=DELETE" method="POST">
+                 <input class="btn my-2 mr-2" type="submit" value="Delete"/>
+                 </form>
+             </div>
 </div>

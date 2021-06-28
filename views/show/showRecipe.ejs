@@ -1,14 +1,23 @@
-<div class="main">
-    <h1>Recipe:<br><%=recipe.title%></h1>
-    <h2>Serving Size:<br><%=recipe.serving%></h2>
-    <p>Ingredients:<br><%=recipe.ingredients%></p>
-    <p>Cooking Instruction:<br><%=recipe.instruction%></p>
-    <img src="<%=recipe.img%>" alt="<%=recipe.title%>">
-    <div class="nav links">
-        <a href="/recipes">Back</a>
-        <a href="/recipe/<%- recipe.id %>/edit">Edit</a>
-        <form action="/recipe/<%-recipe.id%>?_method=DELETE" method="post">
-        <input type="submit" value="Delete" class="button" />
-        </form>
+<div class="container mx-auto">
+    <div class="bg-gray-400 m-3 p-3 rounded-lg shadow-2xl" >
+        <div class="flex justify-between" >
+            <h1 class="text-4xl" >Recipe:<br><%=recipe.title%></h1>
+            <h2>Serving Size: <span class="font-extrabold" > <%=recipe.serving%> </span> </h2>
+        </div>
+        <img class="mx-auto bg-cover rounded-lg" src="<%=recipe.img%>" alt="<%=recipe.title%>">
+        <p class="text-xl my-2" > <span class="font-extrabold"> Ingredients: </span>  <br><%=recipe.ingredients%></p>
+        <p class="text-lg">Cooking Instruction:</p> 
+        <p><%=recipe.instruction%></p>
+        <div class= "container flex justify-around items-center ">
+            <a class="btn" href="/recipes">Back</a>
+
+            <a class="btn" href="/recipe/<%- recipe.id %>/edit">Edit</a>
+
+            <form action="/recipe/<%-recipe.id%>/?_method=DELETE" method="POST">
+            <input class="btn" type="submit" value="Delete" class="button"/>
+            </form>
+
+        </div>
+        </div>
     </div>
 </div>
