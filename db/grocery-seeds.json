@@ -1,15 +1,14 @@
 [
-    {
-       "item":"Chicken",
-       "complete":false
-    },
-    {
-       "item":"Lettuce",
-       "complete":false
-    },
-    {
-       "item":"Red Bell Pepper",
-       "complete":false
-    }
- ]
- 
+  {
+    "item": "Chicken",
+    "complete": false
+  },
+  {
+    "item": "Lettuce",
+    "complete": false
+  },
+  {
+    "item": "Red Bell Pepper",
+    "complete": false
+  }
+]
