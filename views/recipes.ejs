@@ -1,28 +1,42 @@
 <div class="sm:w-full">
-    <div class="ml-4">
-        <div class="containter flex justify-between items-center">
-            <h1 class="text-4xl" >Available Reciepes:</h1>
-            <a class="btn bg-blue-300 hover:bg-blue-400 float-right m-4 p-2" href="/recipe/new">New Recipe</a>
+  <div class="ml-4">
+    <div class="containter flex justify-between items-center">
+      <h1 class="text-4xl">Available Recipes</h1>
+      <a
+        class="btn bg-blue-400 hover:bg-blue-300 float-right m-4 p-2"
+        href="/recipe/new"
+        >New Recipe</a
+      >
+    </div>
+    <ul
+      class="
+        sm:grid sm:grid-cols-2
+        md:grid md:grid-cols-3
+        lg:grid lg:grid-cols-4
+      "
+    >
+      <!-- Recipe List: -->
+      <% recipes.forEach( recipe => { %>
+      <li class="max-w-sm p-6 bg-gray-400 m-3 rounded-lg shadow-xl">
+        <div class="mb-2 text-2xl"><%= recipe.title %></div>
+        <div>
+          <img
+            class="rounded-lg shadow-xl min-w-full"
+            src="<%-recipe.img %>"
+            alt="Recipe Image"
+          />
         </div>
-        <ul class="sm:grid sm:grid-cols-2 md:grid md:grid-cols-3 lg:grid lg:grid-cols-4" >
-            <!-- Recipe List: -->
-            <% recipes.forEach( recipe => { %>
-            <li class="max-w-sm p-6 bg-gray-400 m-3 rounded-lg shadow-xl"> 
-                <div class="mb-2" > <%= recipe.title %> </div>
-                <div><img class="rounded-lg shadow-xl min-w-full" src="<%-recipe.img %>" alt="Recipe Image"></div>
-                <div class= "container flex justify-around items-center ">
-                    <a class="btn" href="/recipe/<%- recipe.id %>">View</a>
-    
-                    <a class="btn" href="/recipe/<%- recipe.id %>/edit">Edit</a>
-    
-                    <form action="/recipe/<%-recipe.id%>/?_method=DELETE" method="POST">
-                    <input class="btn" type="submit" value="Delete" class="button"/>
-                    </form>
-    
-                </div>
-            </li>
-            <% }) %>
-        </ul>
-   </div>
+        <div class="container flex justify-around items-center mt-2">
+          <a class="btn" href="/recipe/<%- recipe.id %>">View</a>
 
+          <a class="btn" href="/recipe/<%- recipe.id %>/edit">Edit</a>
+
+          <form action="/recipe/<%-recipe.id%>/?_method=DELETE" method="POST">
+            <input class="btn" type="submit" value="Delete" class="button" />
+          </form>
+        </div>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
 </div>

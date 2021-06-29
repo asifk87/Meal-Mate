@@ -1,35 +1,41 @@
 <div class="sm:w-full">
-    <!-- <a href="/groceries/new" class="new">Add</a> -->
-   <div class="bg-white py-4 px-3 shadow rounded-lg sm:px-10" >
-       <form action="/pantry" class="mb-0 space-y-6" method="POST">
-           <div class="">
-               <label for="item" class="block text-lg font-medium text-gray-700">Add Item:</label>
-               <div class="mt-2">
-                   <input type="text" name="item" class="w-full rounded-lg">
-               </div>
-            </div>
-            <input class="btn" type="submit">
-           </form>
-   </div>
-   <div class="ml-4">
-       <h1 class="mb-2" >Pantry List:</h1>
-        <ul>
-            <!-- Pantry List: -->
-            <% pantries.forEach( pantry => { %>
-            <li> <div> <%= pantry.item %> </div>
-                <div class= "flex">
-                    <a class="btn m-2" href="/pantry/<%- pantry.id %>">View</a>
-    
-                    <a class="btn m-2" href="/pantry/<%- pantry.id %>/edit">Edit</a>
-    
-                    <form action="/pantry/<%-pantry.id%>/?_method=DELETE" method="POST">
-                    <input class="btn m-2" type="submit" value="Delete" class="button"/>
-                    </form>
-    
-                </div>
-            </li>
-            <% }) %>
-        </ul>
-   </div>
+  <!-- <a href="/groceries/new" class="new">Add</a> -->
+  <div class="bg-white py-4 px-3 shadow rounded-lg sm:px-10">
+    <form action="/pantry" class="mb-0 space-y-6" method="POST">
+      <div class="">
+        <label for="item" class="block text-lg font-medium text-gray-700"
+          >Add Item:</label
+        >
+        <div class="mt-2">
+          <input type="text" name="item" class="w-full rounded-lg" />
+        </div>
+      </div>
+      <input class="btn" type="submit" />
+    </form>
+  </div>
+  <div class="ml-4">
+    <h1 class="mb-2 text-4xl ">Pantry List</h1>
+    <ul>
+      <!-- Pantry List: -->
+      <% pantries.forEach( pantry => { %>
+      <li>
+        <div class="text-2xl" ><%= pantry.item %></div>
+        <div class="flex">
+          <a class="btn m-2" href="/pantry/<%- pantry.id %>">View</a>
 
+          <a class="btn m-2" href="/pantry/<%- pantry.id %>/edit">Edit</a>
+
+          <form action="/pantry/<%-pantry.id%>/?_method=DELETE" method="POST">
+            <input
+              class="btn m-2"
+              type="submit"
+              value="Delete"
+              class="button"
+            />
+          </form>
+        </div>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
 </div>

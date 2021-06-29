@@ -1,33 +1,63 @@
 <div class="container mx-auto">
-    <h1 class="text-2xl" >Edit Recipe</h1>
-    <div class="bg-gray-400 m-3 p-3 rounded-lg shadow-2xl">
-        <form action="/recipe/<%-recipe.id %>/?_method=put" method="POST">
-        <div class="">
-            <div>
-            <label for="title">Recipe Title:</label> <br>
-            <input class="w-full rounded-lg" type="text" name="title" id="title" value="<%-recipe.title%>">
-            </div>
-            <div>
-                <label for="serving">Serving:</label> <br>
-                <input class="w-full rounded-lg" type="number" name="serving" id="serving" value="<%-recipe.serving%>">
-            </div>
-            <div>
-                <label for="ingredients">Ingredients:</label> <br>
-                <input class="w-full rounded-lg" type="text" name="ingredients" id="ingredients" value="<%-recipe.ingredients%>">
-            </div>
-            <div>
-            <label for="instruction">Cooking Instruction:</label> <br>
-            <input class="w-full rounded-lg" type="text" name="instruction" id="instruction" value ="<%-recipe.instruction%>">
-            </div>
-            <div>
-                <label for="img">Image URL:</label> <br>
-                <input class="w-full rounded-lg" type="text" name="img" id="img" value="<%-recipe.img%>">
-            </div>
+  <h1 class="text-2xl">Edit Recipe</h1>
+  <div class="bg-gray-400 m-3 p-3 rounded-lg shadow-2xl">
+    <form action="/recipe/<%-recipe.id %>/?_method=put" method="POST">
+      <div class="">
+        <div>
+          <label for="title">Recipe Title:</label> <br />
+          <input
+            class="w-full rounded-lg"
+            type="text"
+            name="title"
+            id="title"
+            value="<%-recipe.title%>"
+          />
         </div>
-        <div class="flex justify-around my-2" >
-            <input class="btn mx-2" type="submit">
-            <a class="btn mx-2" href="/recipes"> Cancel </a>
+        <div>
+          <label for="serving">Serving:</label> <br />
+          <input
+            class="w-full rounded-lg"
+            type="number"
+            name="serving"
+            id="serving"
+            value="<%-recipe.serving%>"
+          />
         </div>
-        </form>
-    </div>
+        <div>
+          <label for="ingredients">Ingredients:</label> <br />
+          <input
+            class="w-full rounded-lg"
+            type="text"
+            name="ingredients"
+            id="ingredients"
+            value="<%-recipe.ingredients%>"
+          />
+        </div>
+        <div>
+          <label for="instruction">Cooking Instruction:</label> <br />
+          <input
+            class="w-full rounded-lg"
+            type="text"
+            name="instruction"
+            id="instruction"
+            value="<%-recipe.instruction%>"
+          />
+        </div>
+        <div>
+          <label for="img">Image URL:</label> <br />
+          <input
+            class="w-full rounded-lg"
+            type="text"
+            name="img"
+            id="img"
+            value="<%-recipe.img%>"
+          />
+        </div>
+      </div>
+      <div class="flex justify-around my-2">
+        <input class="btn mx-2" type="submit" />
+        <a class="btn mx-2" href="/recipes"> Cancel </a>
+      </div>
+    </form>
+  </div>
 </div>

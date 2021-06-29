@@ -1,13 +1,13 @@
 <div class="ml-4">
-    <h1 class="mb-2 text-xl" >Grocery Item:</h1>
-   <div><h1 class="text-2xl"><%= grocery.item %></h1></div>
-             <div class= "flex">
-                 <a class="btn my-2 mr-2" href="/groceries">Back</a>
- 
-                 <a class="btn my-2 mr-2" href="/groceries/<%- grocery.id %>/edit">Edit</a>
- 
-                 <form action="/groceries/<%-grocery.id%>/?_method=DELETE" method="POST">
-                 <input class="btn my-2 mr-2" type="submit" value="Delete"/>
-                 </form>
-             </div>
+  <h1 class="mb-2 text-xl">Grocery Item:</h1>
+  <div><h1 class="text-2xl"><%= grocery.item %></h1></div>
+  <div class="flex">
+    <a class="btn my-2 mr-2" href="/groceries">Back</a>
+
+    <a class="btn my-2 mr-2" href="/groceries/<%- grocery.id %>/edit">Edit</a>
+
+    <form action="/groceries/<%-grocery.id%>/?_method=DELETE" method="POST">
+      <input class="btn my-2 mr-2" type="submit" value="Delete" />
+    </form>
+  </div>
 </div>

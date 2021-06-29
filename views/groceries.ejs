@@ -1,35 +1,44 @@
 <div class="sm:w-full">
-    <!-- <a href="/groceries/new" class="new">Add</a> -->
-   <div class="bg-white py-4 px-3 shadow rounded-lg sm:px-10" >
-       <form action="/groceries" class="mb-0 space-y-6" method="POST">
-           <div class="">
-               <label for="item" class="block text-lg font-medium text-gray-700">Add Item:</label>
-               <div class="mt-2">
-                   <input type="text" name="item" class="w-full rounded-lg">
-               </div>
-            </div>
-            <input class="btn" type="submit">
-           </form>
-   </div>
-   <div class="ml-4">
-       <h1 class="mb-2" >Grocery List:</h1>
-        <ul>
-            <!-- Grocery List: -->
-            <% groceries.forEach( grocery => { %>
-            <li> <div> <%= grocery.item %> </div>
-                <div class= "flex">
-                    <a class="btn m-2" href="/groceries/<%- grocery.id %>">View</a>
-    
-                    <a class="btn m-2" href="/groceries/<%- grocery.id %>/edit">Edit</a>
-    
-                    <form action="/groceries/<%-grocery.id%>/?_method=DELETE" method="POST">
-                    <input class="btn m-2" type="submit" value="Delete" class="button"/>
-                    </form>
-    
-                </div>
-            </li>
-            <% }) %>
-        </ul>
-   </div>
+  <!-- <a href="/groceries/new" class="new">Add</a> -->
+  <div class="bg-white py-4 px-3 shadow rounded-lg sm:px-10">
+    <form action="/groceries" class="mb-0 space-y-6" method="POST">
+      <div class="">
+        <label for="item" class="block text-lg font-medium text-gray-700"
+          >Add Item:</label
+        >
+        <div class="mt-2">
+          <input type="text" name="item" class="w-full rounded-lg" />
+        </div>
+      </div>
+      <input class="btn" type="submit" />
+    </form>
+  </div>
+  <div class="ml-4">
+    <h1 class="mb-2 text-4xl">Grocery List</h1>
+    <ul>
+      <!-- Grocery List: -->
+      <% groceries.forEach( grocery => { %>
+      <li>
+        <div class="text-2xl" ><%= grocery.item %></div>
+        <div class="flex">
+          <a class="btn m-2" href="/groceries/<%- grocery.id %>">View</a>
 
+          <a class="btn m-2" href="/groceries/<%- grocery.id %>/edit">Edit</a>
+
+          <form
+            action="/groceries/<%-grocery.id%>/?_method=DELETE"
+            method="POST"
+          >
+            <input
+              class="btn m-2"
+              type="submit"
+              value="Delete"
+              class="button"
+            />
+          </form>
+        </div>
+      </li>
+      <% }) %>
+    </ul>
+  </div>
 </div>
