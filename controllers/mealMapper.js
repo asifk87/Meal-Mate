@@ -6,11 +6,11 @@ const Recipe = require("../models/recipe-model");
 
 // Main route
 router.get("/", (req, res) => {
-//   console.log("home route hit");
+  //   console.log("home route hit");
   // res.send('First Home Page')
   Recipe.find({})
     .then((recipes) => {
-    //   console.log(recipes);
+      //   console.log(recipes);
       // res.send(groceries)
       res.render("index", { recipes });
     })
@@ -20,11 +20,12 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
   // console.log(req.body);
   // console.log(req.body.ingredients);
-  // let Search = req.body.ingredients
-  // return console.log(Search.toLowerCase())
-  Recipe.find(req.body)
+  // adding space infront of array because ingd have spaces infront of them to look nice.
+  let search = ( " " + req.body.ingredients)
+  // console.log(search);
+  Recipe.find({ ingredients: search })
     .then((recipes) => {
-    //   console.log(recipes);
+      //   console.log(recipes);
       res.render("index", { recipes });
     })
     // .then(console.log)
