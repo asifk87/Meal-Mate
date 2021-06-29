@@ -4,7 +4,7 @@ Have a bunch of produce in the fridge and not know what to make for dinner tonig
 **Check Out the App [Here](https://intense-tor-13637.herokuapp.com/)**
 
 # Navigation & Usage
-For this project, I wanted to create a function app that would be useful for everyday use. Finding recipes to cook from items I already have in the fridge has always been a challenge. I wanted to start the app where the user can search for an item he already has and it could pull up a recipe for him to use. 
+For this project, I wanted to create a functional app that would be useful for everday people in an everyday use case. The challenge many people face is recipes to cook from with produce they already have in the fridge. I wanted to start the app where the user can search for an item they already have in the possession and the app would pull from a list recipes for them to review and pick from. 
 ![indexPage](/public/images/index.png)
 The user is able to keep a inventory of all the items they have available in their fridge and pantry.
 ![groceryPage](/public/images/groceryPage.png)
