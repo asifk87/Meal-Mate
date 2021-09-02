@@ -1,7 +1,7 @@
 # Meal-Mate
 Have a bunch of produce in the fridge and not know what to make for dinner tonight or even meal prep for the week. Well, this app is designed to keep an inventory of what’s in your pantry and the produce available to you in the fridge and provide you with a list of recipes you can make for your meals. This will help people who struggle to with using their produce already in their friege and items already available to them in their pantry to build an easy meal for everyone.
 
-**Check Out the App [Here](https://intense-tor-13637.herokuapp.com/)**
+**Check Out the App [Here](https://meal-mates-io.herokuapp.com/)**
 
 # Navigation & Usage
 For this project, I wanted to create a functional app that would be useful for everday people in an everyday use case. The challenge many people face is recipes to cook from with produce they already have in the fridge. I wanted to start the app where the user can search for an item they already have in the possession and the app would pull from a list recipes for them to review and pick from. 
